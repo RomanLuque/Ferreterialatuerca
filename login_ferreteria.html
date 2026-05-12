@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferreteria la tuerca</title>
+    <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- ============================================================
+       INICIO: styles.css
+       Arquitectura: variables → reset → layout → componentes → responsive
+       ============================================================ -->
+</head>
+<body>
+
+  <!-- ============================================================
+       INICIO: header / hero — Carrusel
+       ============================================================ -->
+  <header class="hero" role="banner" aria-label="Carrusel de productos y promociones">
+
+    <div class="carousel" id="carousel">
+
+      <!-- Slide 1 -->
+      <div class="slide slide-1" role="group" aria-label="Slide 1 de 3">
+        <span class="slide-icon" aria-hidden="true">🔩</span>
+        <div class="slide-content">
+          <p class="slide-tag">Nuevos ingresos</p>
+          <h2 class="slide-title">Herramientas<br>de Precisión</h2>
+          <p class="slide-sub">Stock renovado en tornillería, brocas y fijaciones industriales de alta resistencia.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide slide-2" role="group" aria-label="Slide 2 de 3">
+        <span class="slide-icon" aria-hidden="true">⚙️</span>
+        <div class="slide-content">
+          <p class="slide-tag">Promoción mayo</p>
+          <h2 class="slide-title">20% OFF<br>en Equipos</h2>
+          <p class="slide-sub">Compresores, amoladoras y equipos de soldadura con envío a todo el país.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide slide-3" role="group" aria-label="Slide 3 de 3">
+        <span class="slide-icon" aria-hidden="true">🏗️</span>
+        <div class="slide-content">
+          <p class="slide-tag">Clientes mayoristas</p>
+          <h2 class="slide-title">Catálogo<br>Industrial 2025</h2>
+          <p class="slide-sub">Accedé al catálogo completo con precios diferenciados para empresas y constructoras.</p>
+        </div>
+      </div>
+
+    </div><!-- /carousel -->
+
+    <!-- Controles -->
+    <button class="carousel-btn prev" id="prev" aria-label="Slide anterior">&#8592;</button>
+    <button class="carousel-btn next" id="next" aria-label="Siguiente slide">&#8594;</button>
+
+    <!-- Indicadores -->
+    <div class="carousel-dots" role="tablist" aria-label="Indicadores de slide">
+      <button class="dot active" data-index="0" role="tab" aria-selected="true"  aria-label="Ir al slide 1"></button>
+      <button class="dot"        data-index="1" role="tab" aria-selected="false" aria-label="Ir al slide 2"></button>
+      <button class="dot"        data-index="2" role="tab" aria-selected="false" aria-label="Ir al slide 3"></button>
+    </div>
+
+  </header>
+  <!-- FIN: header / hero — Carrusel -->
+
+
+  <!-- ============================================================
+       INICIO: main — Contenedor de login
+       ============================================================ -->
+  <main class="main">
+
+    <div class="login-card">
+
+      <!-- Panel izquierdo — Logo -->
+      <aside class="logo-panel" aria-label="Identidad de la empresa">
+
+        <div class="logo-placeholder" role="img" aria-label="Logo FerroPro Industrial (placeholder 200×200)">
+          <!-- Ícono SVG de engranaje como placeholder -->
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M32 20a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm0 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16z" fill="#F37021"/>
+            <path d="M27 4h10l1.5 6.5a18.5 18.5 0 0 1 5.2 3L50 11l7 7-3.5 5.5a18.5 18.5 0 0 1 1.5 6H61v10l-6 1.5a18.5 18.5 0 0 1-3 5.2L54 53l-7 7-5.5-3.5a18.5 18.5 0 0 1-6 1.5V64H25l-1.5-6a18.5 18.5 0 0 1-5.2-3L13 57l-7-7 3.5-5.5A18.5 18.5 0 0 1 8 38H3V28l6-1.5a18.5 18.5 0 0 1 3-5.2L9 15l7-7 5.5 3.5A18.5 18.5 0 0 1 27 10V4z" stroke="#F37021" stroke-width="2" opacity="0.3"/>
+          </svg>
+
+          <div class="logo-brand">Ferreteria<span> la tuerca</span></div>
+        </div>
+
+        <p class="logo-tagline">Industrial · Desde 2026</p>
+
+      </aside><!-- /logo-panel -->
+
+      <!-- Panel derecho — Formulario -->
+      <section class="form-panel" aria-labelledby="form-title">
+
+        <div class="form-header">
+          <p class="form-eyebrow">Portal de clientes</p>
+          <h1 class="form-title" id="form-title">Iniciar Sesión</h1>
+        </div>
+
+        <form id="loginForm" novalidate>
+
+          <!-- Campo Email -->
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <div class="field-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="usuario@empresa.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Campo Contraseña -->
+          <div class="field">
+            <label for="password">Contraseña</label>
+            <div class="field-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Botón principal -->
+          <button type="submit" class="btn btn-primary">
+            Acceder
+          </button>
+
+          <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+
+          <div class="divider">o</div>
+
+          <!-- Botón secundario -->
+          <button type="button" class="btn btn-secondary" onclick="alert('Redirigiendo a registro...')">
+            Crear cuenta
+          </button>
+
+        </form>
+
+      </section><!-- /form-panel -->
+
+    </div><!-- /login-card -->
+
+  </main>
+  <!-- FIN: main — Contenedor de login -->
+
+
+  <!-- ============================================================
+       INICIO: footer
+       ============================================================ -->
+  <footer>
+    &copy; 2026 <strong>Ferreteria la tuerca S.A.</strong> — Ingeniería de Software · I.S.F.D. y T. N°24
+  </footer>
+  <!-- FIN: footer -->
+<script src="script.js"></script>
+</body>
+</html>
