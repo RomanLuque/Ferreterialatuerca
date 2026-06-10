@@ -1,18 +1,18 @@
     /* --- Variables globales --- */
     :root {
-      --clr-bg:        #111213;
-      --clr-surface:   #1a1c1e;
-      --clr-surface2:  #222528;
-      --clr-border:    #2e3135;
-      --clr-text:      #e8eaed;
-      --clr-muted:     #7a808a;
-      --clr-accent:    #F37021;
-      --clr-accent-dk: #c85a10;
+      --clr-bg:        #EFECE3;
+      --clr-surface:   #FFFFFF;
+      --clr-surface2:  #E5E0D6;
+      --clr-border:    #CFC6B8;
+      --clr-text:      #000000;
+      --clr-muted:     #6B7A99;
+      --clr-accent:    #4A70A9;
+      --clr-accent-dk: #355580;
       --clr-white:     #ffffff;
       --font-display:  'Barlow Condensed', sans-serif;
       --font-body:     'Barlow', sans-serif;
       --radius:        6px;
-      --shadow:        0 8px 40px rgba(0,0,0,.55);
+      --shadow:        0 8px 40px rgba(0,0,0,.08);
       --transition:    .25s ease;
     }
 
@@ -273,7 +273,7 @@
       font-size: 1.5rem;
       letter-spacing: .06em;
       text-transform: uppercase;
-      color: var(--clr-white);
+      color: #3a3b3b;
       text-align: center;
       line-height: 1.1;
     }
@@ -321,7 +321,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .02em;
-      color: var(--clr-white);
+      color: #4A70A9;
       line-height: 1.1;
     }
 
